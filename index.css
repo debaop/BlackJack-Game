@@ -1,28 +1,79 @@
+/* Base styles for mobile devices */
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-    background-image: url("table.png");
+    background-color:#016f32;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     font-weight: bold;
     color: white;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 h1 {
     color: goldenrod;
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
 #message-el {
     font-style: italic;
+    font-size: 1rem;
+    padding: 5px 10px;
 }
 
 button {
     color: #016f32;
-    width: 150px;
+    width: 100%;
+    max-width: 280px;
     background: goldenrod;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 12px 20px;
     font-weight: bold;
+    font-size: 16px;
     border: none;
-    border-radius: 2px;
-    margin-bottom: 5px;
+    border-radius: 5px;
+    margin: 8px 0;
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background: #b8860b;
+}
+
+button:active {
+    transform: scale(0.98);
+    background: #9a7209;
+}
+
+
+/* Desktop and larger screens (1024px and up) */
+@media (min-width: 1024px) {
+    body {
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        margin: 20px 0;
+    }
+    
+    #message-el {
+        font-size: 1.25rem;
+    }
+    
+    button {
+        width: 150px;
+        padding: 5px 10px;
+        margin: 5px;
+    }
 }
